@@ -4,6 +4,9 @@ import nodemailer from "nodemailer";
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("🚀 Hello from Render + LambdaPractice!");
+});
 // Email route
 app.post("/send-email", async (req, res) => {
   try {
